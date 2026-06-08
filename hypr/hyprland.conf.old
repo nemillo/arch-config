@@ -1,0 +1,58 @@
+# This config is a STUB! This should never be generated.
+# Use the default lua config from https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua
+
+input {
+	kb_layout = fr
+	touchpad {
+           natural_scroll = true
+        }
+}
+
+splash = false
+
+env = QT_QPA_PLATFORMTHEME,qt6ct
+env = NIXOS_OZONE_WL,1
+env = SDL_VIDEODRIVER,wayland,x11
+env = QT_QPA_PLATFORM,wayland
+
+exec-once = hyprpaper
+exec-once = waybar
+exec-once = udiskie -2 -s
+
+monitor = eDP-1, 1920x1080@60, auto, 1.0
+
+$mainMod = SUPER
+$terminal = kitty
+$fileManager = nautilus
+$menu = hyprlauncher
+
+bind = $mainMod, Q, exec, $terminal
+bind = $mainMod, C, killactive,
+bind = $mainMod, M, exec, command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit
+bind = $mainMod, E, exec, $fileManager
+bind = $mainMod, V, togglefloating,
+bind = $mainMod, R, exec, $menu
+bind = $mainMod, Y, exec, chromium
+
+
+bind = SUPER, ampersand, workspace, 1
+bind = SUPER, eacute, workspace, 2
+bind = SUPER, quotedbl, workspace, 3
+bind = SUPER, apostrophe, workspace, 4
+bind = SUPER, parenleft, workspace, 5
+bind = SUPER, minus, workspace, 6
+bind = SUPER, egrave, workspace, 7
+bind = SUPER, underscore, workspace, 8
+bind = SUPER, ccedilla, workspace, 9
+bind = SUPER, à, workspace, 10
+# Using Keycodes (10 to 19 map to keys 1 to 0 on most keyboards)
+bind = SUPER SHIFT, code:10, movetoworkspace, 1
+bind = SUPER SHIFT, code:11, movetoworkspace, 2
+bind = SUPER SHIFT, code:12, movetoworkspace, 3
+bind = SUPER SHIFT, code:13, movetoworkspace, 4
+bind = SUPER SHIFT, code:14, movetoworkspace, 5
+bind = SUPER SHIFT, code:15, movetoworkspace, 6
+bind = SUPER SHIFT, code:16, movetoworkspace, 7
+bind = SUPER SHIFT, code:17, movetoworkspace, 8
+bind = SUPER SHIFT, code:18, movetoworkspace, 9
+bind = SUPER SHIFT, code:19, movetoworkspace, 10

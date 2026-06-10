@@ -32,6 +32,16 @@
     "tooltip": false
   },
 
+  // Ibiza Global Radio
+  "custom/IGR": {
+    "exec": "cat /home/rafa/.config/waybar/scripts/IGRstatus",
+    "interval": 1,
+    "on-click": "~/.config/waybar/scripts/playIGR.sh",
+    "format": "♪IGR {}", 
+    "tooltip": false
+  },
+  
+
   // Check updates pacman or aur
   "custom/updates": {
     "format": "{}",
@@ -46,13 +56,13 @@
   },
 
   // CAVA Audio Visualizer
-  "custom/cava": {
-    "exec": "~/.config/waybar/scripts/cava.sh",
-    "format": "♪ {}",
-    "on-click-middle": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-click-left": "playerctl previous"
-  },
+  //"custom/cava": {
+  //  "exec": "~/.config/waybar/scripts/cava.sh",
+  //  "format": "♪ {}",
+  //  "on-click-middle": "playerctl play-pause",
+  //  "on-click-right": "playerctl next",
+  //  "on-click-left": "playerctl previous"
+ // },
 
   // Memory / CPU / Temp
   "memory": {

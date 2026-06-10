@@ -282,6 +282,15 @@ tooltip label {
 	border-radius: 12px;
 }
 
+#custom-IGR {
+	background: @background-primary;
+	color: @blue;
+	border-left: 4px solid @blue;
+	margin: 6px 2px;
+	padding: 8px 12px;
+	border-radius: 12px;
+}
+
 #custom-updates {
 	background: @background-primary;
 	color: @yellow;
